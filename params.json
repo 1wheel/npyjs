@@ -1,0 +1,6 @@
+{
+  "name": "npyjs",
+  "tagline": "Read numpy .npy files in JavaScript",
+  "body": "## Installation\r\nInclude npy.js in your project.\r\n\r\n## Usage\r\n\r\n- Create a new npyjs object.\r\n```javascript\r\nlet n = new npyjs();\r\n```\r\n- This object can now be used load .npy files. Arrays are returned via a JavaScript callback, so usage looks like this:\r\n```javascript\r\nn.load('my-array.npy', (array, shape) => {\r\n    // `array` is a one-dimensional array of the raw data\r\n    // `shape` is a one-dimensional array that holds a numpy-style shape.\r\n    console.log(`You loaded an array with ${array.length} elements and ${shape.length} dimensions.`);\r\n});\r\n```\r\n\r\nUnless otherwise specified, all code inside of this repository is covered under the license in [LICENSE](LICENSE).\r\n\r\n## Known Issues\r\n- **<kbd>PRIORITY</kbd>** Currently only supports the `uint8` (`<i8`) datatype.\r\n\r\nPlease report bugs or contribute pull-requests on [GitHub](https://github.com/jhuapl-boss/npyjs). \r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>npyjs by jhuapl-boss</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">npyjs</h1>
+        <p class="header">Read numpy .npy files in JavaScript</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/jhuapl-boss/npyjs/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/jhuapl-boss/npyjs/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/jhuapl-boss/npyjs">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/jhuapl-boss">jhuapl-boss</a></p>
+
+
+      </header>
+      <section>
+        <h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Include npy.js in your project.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<ul>
+<li>Create a new npyjs object.</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">let</span> n <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">npyjs</span>();</pre></div>
+
+<ul>
+<li>This object can now be used load .npy files. Arrays are returned via a JavaScript callback, so usage looks like this:</li>
+</ul>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">n</span>.<span class="pl-c1">load</span>(<span class="pl-s"><span class="pl-pds">'</span>my-array.npy<span class="pl-pds">'</span></span>, (<span class="pl-smi">array</span>, <span class="pl-smi">shape</span>) <span class="pl-k">=&gt;</span> {
+    <span class="pl-c">// `array` is a one-dimensional array of the raw data</span>
+    <span class="pl-c">// `shape` is a one-dimensional array that holds a numpy-style shape.</span>
+    <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">`</span>You loaded an array with <span class="pl-s1"><span class="pl-pse">${</span><span class="pl-smi">array</span>.<span class="pl-c1">length</span><span class="pl-pse">}</span></span> elements and <span class="pl-s1"><span class="pl-pse">${</span><span class="pl-smi">shape</span>.<span class="pl-c1">length</span><span class="pl-pse">}</span></span> dimensions.<span class="pl-pds">`</span></span>);
+});</pre></div>
+
+<p>Unless otherwise specified, all code inside of this repository is covered under the license in <a href="LICENSE">LICENSE</a>.</p>
+
+<h2>
+<a id="known-issues" class="anchor" href="#known-issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Known Issues</h2>
+
+<ul>
+<li>
+<strong><kbd>PRIORITY</kbd></strong> Currently only supports the <code>uint8</code> (<code>&lt;i8</code>) datatype.</li>
+</ul>
+
+<p>Please report bugs or contribute pull-requests on <a href="https://github.com/jhuapl-boss/npyjs">GitHub</a>. </p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
